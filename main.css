@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+}
+
+.page {
+    height: 100vh;
+}
+
+.page::before {
+    content: "";
+    position: fixed;
+    background-color: #0075ff;
+    width: 300%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) skew(0, -10deg);
+    -webkit-transform: translateX(-50%) skew(0, -10deg);
+    -moz-transform: translateX(-50%) skew(0, -10deg);
+    -ms-transform: translateX(-50%) skew(0, -10deg);
+    -o-transform: translateX(-50%) skew(0, -10deg);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    z-index: -1;
+    animation: waving 10s ease-in-out infinite alternate;
+    -webkit-animation: waving 10s ease-in-out infinite alternate;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 0 10px #ddd inset;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10px;
+
+}
+
+.card h2 {
+    padding: 0;
+}
+.card p {
+    padding: 0;
+}
+
+@keyframes waving {
+    from {
+        transform: translateX(-50%) skew(0, -5deg);
+        -webkit-transform: translateX(-50%) skew(0, -5deg);
+        -moz-transform: translateX(-50%) skew(0, -5deg);
+        -ms-transform: translateX(-50%) skew(0, -5deg);
+        -o-transform: translateX(-50%) skew(0, -5deg);
+} to {
+        transform: translateX(-30%) skew(10deg, 0deg);
+        -webkit-transform: translateX(-30%) skew(10deg, 0deg);
+        -moz-transform: translateX(-30%) skew(10deg, 0deg);
+        -ms-transform: translateX(-30%) skew(10deg, 0deg);
+        -o-transform: translateX(-30%) skew(10deg, 0deg);
+}
+}
+
+.menu-icon {
+    margin: 20px auto;
+    width: 30px;
+    height: 14px;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-icon span {
+    background-color: black;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.menu-icon span:nth-child(1) {
+    top: 0;
+}
+.menu-icon span:nth-child(2) {
+    top: 6px;
+}
+.menu-icon span:nth-child(3) {
+    top: 12px;
+}
+
+.menu-icon:hover span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon:hover span:nth-child(1), .menu-icon:hover span:nth-child(3) {
+    top: 6px;
+    background-color: red;
+}
+
+.menu-icon:hover span:nth-child(1) {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.menu-icon:hover span:nth-child(3) {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
