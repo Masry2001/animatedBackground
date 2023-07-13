@@ -36,10 +36,10 @@ body {
 
 .card {
     width: 300px;
-    padding: 20px;
+    padding: 10px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 49%;
     transform: translate(-50%, -50%);
     text-align: center;
     background-color: white;
@@ -142,4 +142,16 @@ body {
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
+}
+
+.main-btn {
+    color:#ffffff ;
+    background-color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 10px;
+    letter-spacing: 1px;
+    border-radius: 15px ;
+
 }
